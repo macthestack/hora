@@ -76,10 +76,7 @@ where
 {
     assert_eq!(vec1.len(), vec2.len());
     // smaller means closer.
-    Ok(
-        -dot(vec1, vec2).unwrap()
-            / (dot(vec1, vec1).unwrap().sqrt() * dot(vec2, vec2).unwrap().sqrt()),
-    )
+    Ok(dot(vec1, vec2).unwrap())
 }
 
 // (a/|a| - b/|b|)^2
